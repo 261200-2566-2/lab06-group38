@@ -1,0 +1,13 @@
+Thing that look good to me :
+    -Code อ่านยากดูน้อยลงแล้ว เนื่องจาก แยก Function ตอน Upgrade อุปกรณ์ใหม่ คือ มี
+Unequip และ Equip ให้ใช้ ดังนั้นเวลา Upgrade อุปกรณ์เสร็จ ให้ ถอดแล้วใส่ใหม่ Stat ก็จะ up to date แล้ว
+ต่างจากเดิมคือ โค้ด อ่านยาก เนื่องจาก รวม Logic 2 อย่างไว้ด้วยกันไม่ได้แยกออกจากกันชัดเจน
+    -Container for store Equipment look OK
+    -Seperate Package for class
+
+Improvement:
+    1. ที่เห็นได้ชัดคือ การจัดการ Stat ยังไม่ดีพอ ยังต้อง Hard Code เขียนเพิ่ม Stat เองลงไปอยู่ในหลายๆส่วน (Equipment Class(include subtype),Constructor Character , Equip Function , Unequip Function)  ควรจะ
+เก็บแบบ Data Struct ชนิดอื่นแล้วค่อยให้ไป อ่าน Data แยกจาก Business Logic
+    2. ไม่ได้แยก Enum ออกจาก Class ทำให้โค้ดยาว
+
+

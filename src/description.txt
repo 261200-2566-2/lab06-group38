@@ -1,0 +1,19 @@
+Class Characters.Character โดยมี PartType เป็น Enum ซึ้งบอกว่า ตัวละครนึงจะใส่ อาวุธได้จุดไหนบ้าง
+และ มี stat ทั่วๆไปเช่น level, exp , hp , mana, etc.
+และมีสิ่งที่สำคัญคือ equipmentMap ที่ map ระหว่างตำแหน่งอุปกรณ์ กับ Class อุปกรณ์
+* getter ของ class เป็นการ get stat ต่างๆ
+* method upgrade ที่จะเป็น instance method ที่เรียกใช้เวลาจะ อัพเกรด อาวุธให้กับ ตัวละครนั้นๆโดยรับเป็น ตำแหน่งอุปกรณ์ที่จะ upgrade มา
+แล้วไปเรียก upgrade equipment ตำแหน่งนั้นๆต่ออีกที ในเรื่อง status เราจะจัดการโดย ลบ
+status เก่าของอาวุธนั้นออกก่อนแล้วหลัง upgrade ค่อยเพิ่มไปใหม่
+* method equip เป็นการสวมใส่อาวุธ โดยparam เป็น ตำแหน่งที่จะสวมใส่ และ equipment มา แล้วจัดการ stat ให้ ตัวละครนั้นๆ
+ ------------------------------------------------------------------------------------------------------------------------------
+ Interface Fighter Mage Ranger สำหรับให้ อาชีพย่อยๆ Extends Class Character และ Implement Interface นี้
+ ------------------------------------------------------------------------------------------------------------------------------
+    Class Equipments.Equipment แต่ละ field มี access modifier เป็น protected เพื่อให้ child class access ได้
+* มี field ที่น่าสนใจคือ บ่งบอกว่า อาวุธนั้น เป็นอุปกรณ์ตำแหน่งไหน
+
+มี Equipments.Sword , Equipments.Shield ,Equipments.Armor  ที่ extends class Equipments.Equipment โดย มี Override method upgrade มาเพื่อให้ การ upgrade
+ไม่เป็นรูปแบบเดียวแต่แตกต่างไปในแต่ละชนิดของอุปกรณ์
+ ------------------------------------------------------------------------------------------------------------------------------
+  Interface Accessory สำหรับให้ subtype ของ Equipment Extends Class Equipment และ Implement Interface นี้
+  ------------------------------------------------------------------------------------------------------------------------------
