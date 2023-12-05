@@ -89,7 +89,9 @@ public class Character {
     public int getRunSpeed(){
         return runSpeed;
     }
-
+    public HashMap<PartType,Equipment> getEquipmentMap(){
+        return equipmentMap;
+    }
     public void upgrade(PartType type){
         Equipment equipment =  equipmentMap.get(type);
         unequip(type,equipment);

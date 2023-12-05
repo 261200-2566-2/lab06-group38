@@ -6,5 +6,5 @@ import Equipments.Equipment;
 public interface Accessory {
     public void upgrade();
     public Equipment combine(Equipment eq1, Equipment eq2);
-    public void recycle(Character c);
+    public void recycle(Character c , Character.PartType type);
 }
